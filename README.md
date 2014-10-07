@@ -40,8 +40,9 @@ conker
 TDD please.  Write a test, pass it, refactor it and then submit a merge request.
 
 ## Release History
-0.1.0 - Initial Release
-0.1.1 - Bug Fixes
+ - 0.1.0 - Initial Release
+ - 0.1.1 - Bug Fixes
+ - 0.1.2 - Version bump
 
 ## License
 Copyright (c) 2014 Karl Stoney  
