@@ -11,6 +11,32 @@ describe('Conker', function() {
     }).should.throw('opts.maxPerKey is null or undefined');
   });
 
+  it('Should return the result to the promise', function(done) {
+    var scheduler = new Conker({
+      maxPerKey: 1
+    });
+    scheduler.start(1, function(callback) {
+      callback(null, 'result');
+    })
+    .then(function(result) {
+      result.should.eql('result');
+      done();
+    });
+  });
+
+  it('Should return the error to the promise', function(done) {
+    var scheduler = new Conker({
+      maxPerKey: 1
+    });
+    scheduler.start(1, function(callback) {
+      callback('error');
+    })
+    .then(null, function(err) {
+      err.should.eql('error');
+      done();
+    });
+  });
+
   it('Should block requests to the same identifier until one has completed', function(done) {
     var scheduler = new Conker({
       maxPerKey: 1
