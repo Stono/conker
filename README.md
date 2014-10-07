@@ -23,9 +23,9 @@ conker
     // Fail :'(
   });
 
-// This request wont happen until the request above completes or fails, as our maxPerKey is set to 1
 conker
   .start(concurrencyKey, function(callback) {
+    // This request wont happen until the request above completes or fails, as our maxPerKey is set to 1
     myApi.doSomethingElse(callback);
   })
   .then(function(result) {
