@@ -1,5 +1,5 @@
 # conker
-A simple concurrency manager for nodejs.  Basically this is to facilitate situations where you want to control the maximum number of delegates being called for a single "key".
+A simple concurrency manager for nodejs.  Basically this is to facilitate situations where you want to control the maximum number of async delegates that can be executed at any time for a single "concurrency key".
 
 ## Getting Started
 Install the module with: `npm install conker`
